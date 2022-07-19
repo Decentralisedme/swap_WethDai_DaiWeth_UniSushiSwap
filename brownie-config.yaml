@@ -1,0 +1,28 @@
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.0.2
+  - OpenZeppelin/openzeppelin-contracts@3.4.0
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.0.2'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.4.0' 
+
+dotenv: .env
+networks:
+  mainnet-fork-dev:
+    weth_token: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2'
+    aave_dai_token: '0x6B175474E89094C44Da98b954EedeAC495271d0F'
+    aave_link_token: '0x514910771AF9Ca656af840dff83E8264EcF986CA'
+    dai_eth_price_feed: '0x773616E4d11A78F511299002da57A0a94577F1f4'
+    uniswapv2_router02: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
+    sushiswapv2_router02: '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F'
+  kovan:
+    weth_token: '0xd0A1E359811322d97991E03f863a0C30C2cF029C'
+    chain_link_token: '0xa36085F69e2889c224210F603D836748e7dC0088'
+    aave_dai_token: '0xFf795577d9AC8bD7D90Ee22b6C1703490b6512FD'
+    aave_link_token: '0xAD5ce863aE3E4E9394Ab43d4ba0D80f419F61789'
+    dai_eth_price_feed: '0x22B58f1EbEDfCA50feF632bD73368b2FdA96D541'
+    sushiswapv2_router02: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'
+    sushi_dai_token: '0x4F96Fe3b7A6Cf9725f59d353F723c1bDb64CA6Aa'
+wallets:
+  from_key: ${PRIVATE_KEY}
